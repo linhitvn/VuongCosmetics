@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<Resources language="Message" code="vn">	
+	<page name="VIETNAM">
+		<Resource tag="MSGTITLE">Thông báo</Resource>
+    <Resource tag="SAVESUCC">[[img border="0" src="/assets/images/Ok24.png" /]][[span class='savesucc']] Cập nhật dữ liệu thành công [[/span]]</Resource>
+    <Resource tag="DELSUCC">[[img border="0" src="/assets/images/Ok24.png" /]][[span class='savesucc']] Xoá dữ liệu thành công [[/span]]</Resource>   
+    <Resource tag="ERROR">[[img border="0" src="/assets/images/error24.png" /]][[span class='warning']] {0} [[/span]]</Resource>    
+    <Resource tag="WARNING">[[img border="0" src="/assets/images/warning24.png" /]][[span class='warning']] {0} [[/span]]</Resource>  
+    <Resource tag="SYSERROR">[[img border="0" src="/assets/images/error24.png" /]][[span class='warning']]Lỗi hệ thống: {0} [[/span]]</Resource>
+	  <Resource tag="ANYSUCC">[[img border="0" src="/assets/images/Ok24.png" /]][[span class='savesucc']] {0} [[/span]]</Resource>
+	</page>
+</Resources>

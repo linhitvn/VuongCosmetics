@@ -1,0 +1,127 @@
+﻿<?xml version="1.0"?>
+<Resources language="Việt Nam" code="vn">
+	<page name="PAYCARD">
+		<Resource tag="COUNTLIMIT">	Nếu bạn nhập sai [[b]][[font color='red']] {0} [[/font]][[/b]] lần sẽ bị khóa tài khoản trong vòng 1 ngày.	</Resource>
+		<Resource tag="COUNTNUM"> Bạn đã nhập sai [[b]][[font color='red']] {0} [[/font]][[/b]] lần. </Resource>
+		<Resource tag="SERIAL"> Số Serial từ lớp tráng bạc trên thẻ, gồm 12 ký tự. </Resource>
+		<Resource tag="CARDCODE"> Mã thẻ từ lớp tráng bạc trên thẻ, gồm 12 ký tự. </Resource>
+	</page>
+	<page name="CREATEEMAIL">
+		<Resource tag="SUBJECT">Cập nhật địa chỉ email trên Tuyển Coder</Resource>
+		<Resource tag="BODY">
+      Chào bạn,[[br]][[br]]
+      Bạn hoặc ai đó đã thực hiện cập nhật địa chỉ email trên trang [[a href='http://tuyencoder.com/']]http://tuyencoder.com/[[/a]] [[br]][[br]]
+      Tài khoản: [[b]] {0} [[/b]][[br]][[br]]
+      Để bảo mật và đảm bảo quyền lợi của bạn, xin nhấp chuột vào liên kết bên dưới hoặc chép vào trình duyệt để xác nhận địa chỉ email:[[br]]
+      {1}[[br]][[br]]
+      Nếu không phải bạn thực hiện, xin KHÔNG nhấn chuột vào liên kết bên trên và bỏ qua email này.[[br]][[br]]
+      Mọi thắc mắc xin vui lòng liên hệ email:[[a href='mailto:support@tuyencoder.com']] support@tuyencoder.com [[/a]]hoặc số điện thoại [[b]]1900 1858[[/b]] nhánh số 2[[br]][[br]]
+      Cảm ơn bạn đã đến với Tuyển Coder.
+    </Resource>
+		<Resource tag="SENDFAIL">Chúng tôi không gửi được đến Email của bạn, bạn vui lòng xem lại Email.</Resource>
+		<Resource tag="SENDSUCC">Xác nhận đã được gửi đến Email của bạn. Vui lòng kiểm tra Email để xác nhận.</Resource>
+	</page>
+	<page name="FORGETPASSWORD">
+		<Resource tag="SUBJECT">Yêu cầu lấy lại mật khẩu tài khoản</Resource>
+		<Resource tag="BODY">Chào bạn,[[br]]
+			Bạn hoặc ai đó đã thực hiện yêu cầu lấy lại mật khẩu trên trang [[a href='http://tuyencoder.com/']]http://tuyencoder.com/[[/a]] [[br]][[br]]
+			Tài khoản: [[b]] {0} [[/b]][[br]]
+			Mật khẩu:  [[b]] {1} [[/b]][[br]][[br]]
+			Nếu không phải bạn yêu cầu, xin bỏ qua email này.[[br]][[br]]
+			Mọi thắc mắc xin vui lòng liên hệ email:[[a href='mailto:support@tuyencoder.com']] support@tuyencoder.com [[/a]]hoặc số điện thoại [[b]]1900 1858[[/b]] nhánh số 2[[br]][[br]]
+			Cảm ơn bạn đã đến với Tuyển Coder.
+		</Resource>
+	</page>	
+	<page name="EMAILACTIVE">
+		<Resource tag="ACTIVE">Xin chúc mừng, bạn đã xác nhận địa chỉ email thành công</Resource>
+		<Resource tag="ERROR">
+			- Link xác nhận không đúng[[br]]
+			- Hoặc link đã được xác nhận rồi[[br]][[br]]
+			[[p style='color:#000']]Bạn hãy kiểm tra lại đường link mà chúng tôi cung cấp trong Email [[br]]
+			hoặc liên lạc với bộ phận hỗ trợ qua số điện thoại [[b]]1900 1858[[/b]].[[/p]]
+		</Resource>
+	</page>
+	<page name="CHANGEEMAIL">
+		<Resource tag="SUBJECT">Thay đổi địa chỉ Email trên Tuyển Coder</Resource>
+		<Resource tag="BODY">Chào bạn [[b]] {0} [[/b]][[br]][[br]]
+			Bạn hoặc ai đó đã thực hiện thay đổi địa chỉ email mới trên trang [[a href='http://tuyencoder.com/']]http://tuyencoder.com/[[/a]] [[br]][[br]]
+			Để hoàn tất việc thay đổi địa chỉ Email mới, xin nhấp chuột vào liên kết bên dưới hoặc chép vào trình duyệt:[[br]][[br]]
+			{1}[[br]][[br]]
+			Nếu không phải bạn thực hiện, xin KHÔNG nhấn chuột vào liên kết bên trên và bỏ qua email này.[[br]][[br]]
+			Mọi thắc mắc xin vui lòng liên hệ email:[[a href='mailto:support@tuyencoder.com']] support@tuyencoder.com [[/a]]hoặc số điện thoại [[b]]1900 1858[[/b]] nhánh số 2[[br]][[br]]
+			Cảm ơn bạn đã đến với Tuyển Coder.
+		</Resource>
+		<Resource tag="SENDFAIL">Có lỗi trong quá trình gửi email, bạn vui lòng cập nhật Email sau.</Resource>
+	</page>
+	<page name="CONFIRMEMAIL">		
+		<Resource tag="ERROR">[[b]]THÔNG BÁO[[/b]][[br]]
+			- Link xác nhận không đúng[[br]][[br]]
+			[[p style='color:#000']]Bạn hãy kiểm tra lại đường link mà chúng tôi cung cấp trong Email [[br]]
+			hoặc liên lạc với bộ phận hỗ trợ qua số điện thoại [[b]]1900 1858[[/b]].[[/p]]
+		</Resource>
+	</page>
+	<page name="CHANGEPERSONALID">
+		<Resource tag="SUBJECT">Thay đổi số CMND trên Tuyển Coder</Resource>
+		<Resource tag="BODY">Chào bạn [[b]] {0} [[/b]][[br]][[br]]
+			Bạn hoặc ai đó đã thực hiện thay đổi Số CMND/Hộ chiếu mới trên trang [[a href='http://tuyencoder.com/']]http://tuyencoder.com/[[/a]] [[br]][[br]]
+			Để hoàn tất việc thay đổi số CMND/Hộ chiếu mới, xin nhấp chuột vào liên kết bên dưới hoặc chép vào trình duyệt:[[br]][[br]]
+			{1}[[br]][[br]]
+			Nếu không phải bạn thực hiện, xin [[b]]KHÔNG[[/b]] nhấn chuột vào liên kết bên trên và bỏ qua email này.[[br]][[br]]
+			Mọi thắc mắc xin vui lòng liên hệ email:[[a href='mailto:support@tuyencoder.com']] support@tuyencoder.com [[/a]]hoặc số điện thoại [[b]]1900 1858[[/b]] nhánh số 2[[br]][[br]]
+			Cảm ơn bạn đã đến với Tuyển Coder.
+		</Resource>
+		<Resource tag="ERROR">[[b]]THÔNG BÁO[[/b]][[br]]
+			- Link xác nhận không đúng[[br]][[br]]
+			[[p style='color:#000']]Bạn hãy kiểm tra lại đường link mà chúng tôi cung cấp trong Email [[br]]
+			hoặc liên lạc với bộ phận hỗ trợ qua số điện thoại [[b]]1900 1858[[/b]].[[/p]]
+		</Resource>
+	</page>
+	<page name="COMMON">
+		<Resource tag="EMAILINPUT">Bạn chưa nhập địa chỉ Email</Resource>
+		<Resource tag="EMAILERROR">Email đăng ký không hợp lệ</Resource>
+		<Resource tag="EMAILUSED">Địa chỉ Email này đã có người sử dụng</Resource>
+		<Resource tag="EMAILAVAILABLE">Bạn có thể sử dụng Email này</Resource>
+		
+		<Resource tag="PASS2INPUT">Bạn chưa nhập vào Mật khẩu giao dịch</Resource>
+		<Resource tag="PASS2ERROR">Mật khẩu giao dịch không đúng</Resource>
+		<Resource tag="SYSERROR">Lỗi hệ thống mạng! Bạn vui lòng quay lại sau</Resource>
+
+		<Resource tag="MSGTITLE">Thông báo</Resource>
+	</page>
+  <page name="CHANGEEMAILREPORT">
+    <Resource tag="TITLE">Đổi địa chỉ Email</Resource>
+    <Resource tag="MESSAGE">Bạn đã thay đổi địa chỉ Email thành công. Hãy kiểm tra Email mới và xác nhận để hoàn tất việc thay đổi.</Resource>
+  </page>  
+  <page name="CHAGEPASS1REPORT">
+    <Resource tag="TITLE">Đổi mật khẩu Đăng nhập</Resource>
+    <Resource tag="MESSAGE">Bạn đã thay đổi mật khẩu Đăng nhập thành công!.</Resource>
+  </page>
+  <page name="CHAGEP1BYP2REPORT">
+    <Resource tag="TITLE">Đổi mật khẩu Đăng nhập</Resource>
+    <Resource tag="MESSAGE">Bạn đã thay đổi mật khẩu Đăng nhập bằng mật khẩu Giao dịch thành công!.</Resource>
+  </page>
+  <page name="CHAGEPASS2REPORT">
+    <Resource tag="TITLE">Đổi mật khẩu Giao dịch</Resource>
+    <Resource tag="MESSAGE">Bạn đã thay đổi mật khẩu Giao dịch thành công!.</Resource>
+  </page>
+  <page name="CREATEEMAILREPORT">
+    <Resource tag="TITLE">Đổi địa chỉ Email</Resource>
+    <Resource tag="MESSAGE">Bạn đã thay đổi địa chỉ Email thành công. Hãy kiểm tra Email mới và xác nhận để hoàn tất việc thay đổi.</Resource>
+  </page>
+  <page name="CREATEPASS2REPORT">
+    <Resource tag="TITLE">Tạo mật khẩu Giao dịch</Resource>
+    <Resource tag="MESSAGE">Bạn đã tạo mật khẩu Giao dịch thành công!.</Resource>
+  </page>
+  <page name="FORGOTPASS1REPORT">
+    <Resource tag="TITLE">Quên mật khẩu Đăng nhập</Resource>
+    <Resource tag="MESSAGE">Mật khẩu Đăng nhập đã được gửi đến Email của bạn. Vui lòng kiểm tra Email để lấy lại mật khẩu!.</Resource>
+  </page>
+  <page name="FORGOTPASS2REPORT">
+    <Resource tag="TITLE">Quên mật khẩu Giao dịch</Resource>
+    <Resource tag="MESSAGE">Bạn đã đổi mật khẩu Giao dịch thành công!.</Resource>
+  </page>
+  <page name="SENDMAILREPORT">
+    <Resource tag="TITLE">Gửi thông tin liên hệ</Resource>
+    <Resource tag="MESSAGE">Email của bạn đã được gửi đến hệ thống Tuyển Coder Paygate. Chúng tôi sẽ xem xét và trả lời bạn trong thời gian sớm nhất. Chân thành cảm ơn!</Resource>
+  </page>
+</Resources>
