@@ -16,11 +16,10 @@
             </div>
             <div class="col-lg-4 col-md-12 col-sm-12">
                 <div class="footer-link">
-                    <h4>Thông tin</h4>
+                    <h4>Sơ đồ trang web</h4>
                     <ul>
                         <li><a href="/gioi-thieu/index.html">Giới thiệu</a></li>
                         <li><a href="/san-pham/index.html">Sản phẩm</a></li>
-                        <li><a href="#">Điều khoản sử dụng</a></li>
                         <li><a href="#">Chính sách bán hàng</a></li>
                         <li><a href="#">Câu hỏi thường gặp</a></li>
                     </ul>
@@ -28,7 +27,7 @@
             </div>
             <div class="col-lg-4 col-md-12 col-sm-12">
                 <div class="footer-link-contact">
-                    <h4>Liên hệ</h4>
+                    <h4>thông tin Liên hệ</h4>
                     <ul>
                         <li>
                             <p><i class="fas fa-map-marker-alt"></i>Địa chỉ: 315 Nguyễn Văn Linh,

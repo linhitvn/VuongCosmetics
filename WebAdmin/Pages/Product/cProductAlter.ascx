@@ -68,11 +68,11 @@
                             <select runat="server" id="fProducerID" datatextfield="ProducerName" datavaluefield="ID" class="form-control"></select>
                         </div>
                         <div class="form-group">
-                            <label>Ngày tạo</label>
-                            <telerik:RadDatePicker ID="fSysDate" runat="server" Culture="Vietnamese (Vietnam)" MinDate="1900-01-01">
-                                <DatePopupButton Enabled="false" ToolTip="Chọn ngày" ImageUrl="" HoverImageUrl="" />
-                                <DateInput runat="server" Enabled="false" DisplayDateFormat="dd/MM/yyyy" DateFormat="dd/MM/yyyy" />
-                            </telerik:RadDatePicker>
+                                <label>Ngày tạo</label>
+                                <telerik:RadDatePicker ID="fSysDate" runat="server" Culture="Vietnamese (Vietnam)" MinDate="1900-01-01">
+                                    <DatePopupButton Enabled="false" ToolTip="Chọn ngày" ImageUrl="" HoverImageUrl="" />
+                                    <DateInput runat="server" Enabled="false" DisplayDateFormat="dd/MM/yyyy" DateFormat="dd/MM/yyyy" />
+                                </telerik:RadDatePicker>
                         </div>
                     </div>
                     <!-- /.box-body -->
@@ -133,15 +133,15 @@
                                 <div class="checkbox">
                                     <label>
                                         <input runat="server" id="fIsShow" type="checkbox" />
-                                        Hiện/ Ẩn sản phẩm
+                                        <b>Hiện/ Ẩn sản phẩm</b>
                                     </label>
                                 </div>
                             </div>
-                            <div class="form-group" style="display: none;">
+                            <div class="form-group">
                                 <div class="checkbox">
                                     <label>
                                         <input runat="server" id="fIsHiddenWhenOutoff" type="checkbox" />
-                                        Ẩn khi hết hàng
+                                        Hết hàng (&#10004; khi hết hàng)
                                     </label>
                                 </div>
                             </div>

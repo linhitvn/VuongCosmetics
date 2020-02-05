@@ -92,11 +92,11 @@
                 <div class="order-box">
                     <h3>Chi tiết đơn hàng</h3>
                     <div class="d-flex">
-                        <span>Sub Total</span>
+                        <span>Giá tiền sản phẩm</span>
                         <div class="ml-auto font-weight-bold"><asp:Label ID="lblSumOrder" runat="server" Text="0"></asp:Label> </div>
                     </div>
                     <div class="d-flex">
-                        <span>Tax</span>
+                        <span>Thuế</span>
                         <div class="ml-auto font-weight-bold"><asp:Label ID="lblTax" runat="server" Text="0"></asp:Label> </div>
                     </div>
                     <div class="d-flex">
@@ -115,8 +115,10 @@
             </div>
             <!-- CHECK-OUT Button -->
             <div class="col-12 d-flex my-5">
-                <asp:LinkButton ID="lkbBuy" runat="server" CssClass="ml-auto btn hvr-hover" 
+                <a class="ml-auto btn hvr-hover" href="/san-pham/index.html" >Tiếp tục mua hàng</a>&nbsp; &nbsp;
+                <asp:LinkButton ID="lkbBuy" runat="server" CssClass="btn hvr-hover" 
                             Visible="false" onclick="lkbBuy_Click">Thanh toán đơn hàng</asp:LinkButton>
+                
             </div>
             <!-- CHECK-OUT Button -->
         </div>

@@ -99,10 +99,10 @@
 					                        <HeaderStyle Width="7%" HorizontalAlign="Center" />
                                             <ItemStyle HorizontalAlign="Center" />
 				                        </telerik:GridBoundColumn>
-                                        <telerik:GridBoundColumn DataField="ProductCat" UniqueName="ProductCat" HeaderText="Danh mục" ShowFilterIcon="false">
+                                        <%--<telerik:GridBoundColumn DataField="ProductCat" UniqueName="ProductCat" HeaderText="Danh mục" ShowFilterIcon="false">
 					                        <HeaderStyle Width="17%" HorizontalAlign="Center" />
                                             <ItemStyle HorizontalAlign="Center" />
-				                        </telerik:GridBoundColumn>
+				                        </telerik:GridBoundColumn>--%>
 				                        <telerik:GridBoundColumn DataField="Price" UniqueName="Price" DataFormatString="{0:###,###}" HeaderText="Giá Bán" ShowFilterIcon="false">
 					                        <HeaderStyle Width="8%" HorizontalAlign="Center" />
                                             <ItemStyle HorizontalAlign="Right" />
@@ -117,6 +117,10 @@
 				                        <telerik:GridBoundColumn DataField="NumSaled" UniqueName="NumSaled" DataFormatString="{0:###,###}" HeaderText="Đã bán" ShowFilterIcon="false">
 					                        <HeaderStyle Width="10%" HorizontalAlign="Center" />
 				                        </telerik:GridBoundColumn>--%>
+                                        <telerik:GridCheckBoxColumn DataField="IsHiddenWhenOutoff" UniqueName="IsHiddenWhenOutoff" HeaderText="Hết hàng" ShowFilterIcon="false" ReadOnly="True">
+					                        <HeaderStyle Width="10%" HorizontalAlign="Center" />
+					                        <ItemStyle HorizontalAlign="Center" />
+				                        </telerik:GridCheckBoxColumn>
 				                        <telerik:GridCheckBoxColumn DataField="IsShow" UniqueName="IsShow" HeaderText="Hiễn thị" ShowFilterIcon="false" ReadOnly="True">
 					                        <HeaderStyle Width="10%" HorizontalAlign="Center" />
 					                        <ItemStyle HorizontalAlign="Center" />

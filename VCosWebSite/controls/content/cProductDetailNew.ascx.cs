@@ -48,11 +48,19 @@ public partial class controls_content_cProductDetailNew : System.Web.UI.UserCont
 
                 lblPrice.Text = Convert.ToInt32(dt.Rows[0]["Price"]).ToString("#,##");
 
-                if(dt.Rows[0]["SalePrice"].ToString() != "0")
+                //if(dt.Rows[0]["SalePrice"].ToString() != "0")
+                //{
+                //    lblSalePrice.Text = Convert.ToInt32(dt.Rows[0]["SalePrice"]).ToString("#,##") + " VNĐ";
+                //}
+                if (Convert.ToBoolean(dt.Rows[0]["IsHiddenWhenOutoff"]))
                 {
-                    lblSalePrice.Text = Convert.ToInt32(dt.Rows[0]["SalePrice"]).ToString("#,##") + " VNĐ";
+                    lblOutofStock.Text = "Hết hàng";
                 }
-                
+                else
+                {
+                    lblOutofStock.Text = "Còn hàng";
+                }
+                    
                 lblDescription.Text = dt.Rows[0]["Description"].ToString();
 
                 lblPID.Text = ID.ToString();

@@ -131,7 +131,7 @@
                     </div>
                     <hr>
                     <div class="d-flex">
-                        <span>Sub Total</span>
+                        <span>Giá tiền sản phẩm</span>
                         <div class="ml-auto font-weight-bold">
                             <asp:Label ID="lblSumOrder" runat="server" Text="0"></asp:Label>
                             VNĐ</div>

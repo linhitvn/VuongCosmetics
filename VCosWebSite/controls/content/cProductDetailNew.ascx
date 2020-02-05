@@ -30,11 +30,12 @@
                         <asp:Label ID="lblProductName" runat="server" Text=""></asp:Label></h1>
                     <h5><del>
                         <asp:Label ID="lblSalePrice" runat="server" Text=""></asp:Label>
-                        </del>
+                    </del>
                         <asp:Label ID="lblPrice" runat="server" Text=""></asp:Label>
                         VNĐ</h5>
                     <p class="available-stock">
-                        <span>Còn hàng </span>
+                        <%--<span>Còn hàng </span>--%>
+                        <asp:Label ID="lblOutofStock" runat="server" Text=""></asp:Label>
                     </p>
                     <asp:Label ID="lblDescription" runat="server" Text=""></asp:Label>
 
@@ -42,7 +43,7 @@
                     <ul>
                         <li>
                             <div class="form-group quantity-box">
-                                <telerik:RadNumericTextBox RenderMode="Lightweight" ID="txtQuantity" runat="server" Value="1" MinValue="1" MaxLength="2" MaxValue="50" Type="Number" EnableEmbeddedSkins="false" ShowSpinButtons="true" NumberFormat-DecimalDigits="0" ></telerik:RadNumericTextBox>
+                                <telerik:RadNumericTextBox RenderMode="Lightweight" ID="txtQuantity" runat="server" Value="1" MinValue="1" MaxLength="2" MaxValue="50" Type="Number" EnableEmbeddedSkins="false" ShowSpinButtons="true" NumberFormat-DecimalDigits="0"></telerik:RadNumericTextBox>
                             </div>
                         </li>
                     </ul>
