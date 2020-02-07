@@ -3,7 +3,7 @@
     <ul class="slides-container">
         <asp:Repeater ID="rptSlider" runat="server">
             <ItemTemplate>
-                <li class='<%# (Container.ItemIndex + 1) % 3 == 1 ? "text-left" : (Container.ItemIndex + 1) % 3 == 2 ? "text-center" : "text-right" %>'>
+                <li class='<%# (Container.ItemIndex + 1) % 3 == 1 ? "text-center" : (Container.ItemIndex + 1) % 3 == 2 ? "text-center" : "text-center" %>'>
                     <img alt="" src='<%# Eval("ImgLink")%>' />
                     <div class="container">
                         <div class="row">
