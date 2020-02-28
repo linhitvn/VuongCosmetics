@@ -34,7 +34,7 @@
                     <br />
                     <div class="input-group">
                         <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                        <input runat="server" id="txtUserName" type="text" name="userid" class="form-control" placeholder="User ID" />
+                        <input runat="server" id="txtUserName" type="text" name="userid" class="form-control" placeholder="Username" />
                     </div>
                     <br />
                     <div class="input-group">
