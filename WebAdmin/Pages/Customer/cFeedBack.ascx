@@ -1,0 +1,95 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="cFeedBack.ascx.cs" Inherits="Pages_Customer_cFeedBack" %>
+
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        <i class="fa fa-list"></i>
+        Phản hồi từ người dùng
+    </h1>
+    <ol class="toolbar">
+       <%-- <li><button runat="server" id="btCreate" onserverclick="New_Click" class="btn btn-info btn-sm">
+            <i class="fa fa-plus-square"></i>
+            <span>Tạo mới</span>
+            </button>
+        </li>
+        <li><button runat="server" id="btClone" onserverclick="Clone_Click" class="btn btn-info btn-sm">
+            <i class="fa fa-copy"></i>
+            <span>Sao chép</span>
+            </button>
+       </li>--%>
+        <li>
+            <button runat="server" id="btDelete" onserverclick="Delete_Click" class="btn btn-info btn-sm">
+                <i class="fa fa-trash-o"></i>
+                <span>Xóa</span>
+            </button>
+        </li>
+    </ol>
+</section>
+<asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Always">
+<ContentTemplate>
+<div runat="server" id="message_box">    
+</div>
+
+
+
+
+<section class="content">
+    <div class="row mailbox">
+        <div class="col-xs-12">
+            <div class="box">
+                <div class="box-body table-responsive">
+                    <div id="example1_wrapper" class="dataTables_wrapper form-inline" role="grid">
+                       <telerik:RadGrid ID="RadGrid1" ClientInstanceName="RadGrid1" runat="server" EnableEmbeddedSkins="false"  
+                                GridLines="None" AllowPaging="True" AllowSorting="false" AutoGenerateColumns="False"
+			                AllowMultiRowSelection="true" AllowFilteringByColumn="false" 
+                        OnItemCommand="RadGrid1_ItemCommand" onneeddatasource="RadGrid1_NeedDataSource">
+                            <MasterTableView DataKeyNames="ID" ShowHeadersWhenNoRecords="true" CssClass="table table-bordered table-striped dataTable">
+                                <Columns>
+						            <telerik:GridClientSelectColumn ItemStyle-CssClass="small-col" UniqueName="ClientSelectColumn1" HeaderStyle-HorizontalAlign="Center">
+                                        <ItemStyle Width="10%" HorizontalAlign="Center" />
+                                    </telerik:GridClientSelectColumn>
+                                    <telerik:GridBoundColumn DataField="FeedBack" UniqueName="FeedBack" ShowFilterIcon="false" HeaderText="Tiêu đề" ItemStyle-CssClass="subject">
+					                    <HeaderStyle Width="25%" HorizontalAlign="Center" /> 
+				                    </telerik:GridBoundColumn>
+                                     <telerik:GridBoundColumn ItemStyle-CssClass="name" DataField="Name" UniqueName="Name" HeaderText="Người gởi" ShowFilterIcon="false">
+					                    <HeaderStyle Width="25%" HorizontalAlign="Center" /> 
+				                    </telerik:GridBoundColumn>
+                                    <telerik:GridBoundColumn DataField="SysDate" UniqueName="SysDate"
+                                            DataFormatString="{0:dd/MM/yyyy HH:mm}" HeaderText="Thời gian" 
+                                        ShowFilterIcon="false" ItemStyle-CssClass="time" > 
+					                    <HeaderStyle Width="20%" HorizontalAlign="Center" />
+                                        <ItemStyle HorizontalAlign="Center" />
+				                    </telerik:GridBoundColumn>
+                                    <telerik:GridCheckBoxColumn ItemStyle-CssClass="small-col" DataField="IsRead" UniqueName="IsRead" HeaderText="Đã Đọc" ShowFilterIcon="false">
+					                    <HeaderStyle Width="10%" HorizontalAlign="Center" />
+                                        <ItemStyle HorizontalAlign="Center" /> 
+				                    </telerik:GridCheckBoxColumn>
+
+				                    <%-- <telerik:GridBoundColumn DataField="Email" UniqueName="Email" HeaderText="E-mail" ShowFilterIcon="false">
+					                    <HeaderStyle Width="15%" HorizontalAlign="Center" /> 
+				                    </telerik:GridBoundColumn>--%>
+				                        
+				                    
+                                    <telerik:GridTemplateColumn ShowFilterIcon="false" AllowFiltering="false">
+                                        <HeaderStyle Width="10%" HorizontalAlign="Center" /> 
+                                        <ItemTemplate>
+                                            <asp:ImageButton ID="ImageButton2" CommandName='<%# ActRow.Edit %>'
+                                                CommandArgument='<%# Eval("ID") %>' runat="server"
+                                                ImageUrl="~/images/edit.png" ToolTip="Xem và trả lời"/>
+                                        </ItemTemplate>
+                                        <ItemStyle HorizontalAlign="Center" />
+                                    </telerik:GridTemplateColumn>
+                                </Columns>
+                            </MasterTableView>
+                            <ClientSettings>            
+                                <Selecting AllowRowSelect="true"></Selecting>
+                            </ClientSettings>
+                        </telerik:RadGrid>
+                    </div>
+                </div><!-- /.box-body -->
+            </div><!-- /.box -->
+        </div>
+    </div>
+</section>
+</ContentTemplate>
+</asp:UpdatePanel>
