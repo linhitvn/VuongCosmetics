@@ -137,11 +137,11 @@
                                     </label>
                                 </div>
                             </div>
-                            <div class="form-group" style="display: none;">
+                            <div class="form-group">
                                 <div class="checkbox">
                                     <label>
                                         <input runat="server" id="fIsHiddenWhenOutoff" type="checkbox" />
-                                        Ẩn khi hết hàng
+                                        Hết hàng
                                     </label>
                                 </div>
                             </div>
