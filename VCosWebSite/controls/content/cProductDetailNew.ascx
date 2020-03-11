@@ -38,7 +38,7 @@
                         <asp:Label ID="lblOutofStock" runat="server" Text=""></asp:Label>
                     </p>
                     <asp:Label ID="lblDescription" runat="server" Text=""></asp:Label>
-
+                    <asp:Panel ID="pnlOutofStock" runat="server">
                     <h4>Số lượng đặt mua:</h4>
                     <ul>
                         <li>
@@ -54,6 +54,7 @@
                             <asp:LinkButton ID="lkbAddCart" runat="server" CssClass="btn hvr-hover" OnClick="lkbAddCart_Click">Đặt Mua</asp:LinkButton>
                         </div>
                     </div>
+                    </asp:Panel>
                 </div>
             </div>
         </div>

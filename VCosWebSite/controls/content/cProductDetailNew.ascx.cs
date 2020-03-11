@@ -55,6 +55,7 @@ public partial class controls_content_cProductDetailNew : System.Web.UI.UserCont
                 if (Convert.ToBoolean(dt.Rows[0]["IsHiddenWhenOutoff"]))
                 {
                     lblOutofStock.Text = "Hết hàng";
+                    pnlOutofStock.Visible = false;
                 }
                 else
                 {
