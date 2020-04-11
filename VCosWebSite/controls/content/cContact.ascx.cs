@@ -6,15 +6,32 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using NDL.Framework.Common;
 using System.Web.Configuration;
+using System.Data;
 
 public partial class controls_content_cContact : System.Web.UI.UserControl
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-       
+        if (!Page.IsPostBack)
+        {
+            LoadContactUs();
+        }
     }
 
-
+    private void LoadContactUs()
+    {
+        try
+        {
+            DataTable dt = new DataTable();
+            DAArticle oData = new DAArticle();
+            dt.Load(oData.USP_Article_Client_GetContactUs());
+            if (dt.Rows.Count > 0)
+                divContactUs.InnerHtml = dt.Rows[0]["Content"].ToString();
+        }
+        catch
+        {
+        }
+    }
     protected void btnSend_Click(object sender, EventArgs e)
     {
         txtFullName.Value = txtFullName.Value.Trim();

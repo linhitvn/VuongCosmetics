@@ -4,22 +4,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-4 col-sm-12">
-                <div class="contact-info-left">
-                    <h2>Thông tin liên hệ </h2>
-                    <p>Cảm ơn bạn đã quan tâm đến sản phẩm của chúng tôi! Chúng tôi sẽ trả lời bạn trong thời gian sớm nhất về các vấn đề quan tâm như: phương thức giao hàng - thanh toán, chế độ bảo hành - đổi trả sản phẩm, chính sách đại lý.... </p>
-                    <ul>
-                        <li>
-                            <p><i class="fas fa-map-marker-alt"></i>Địa chỉ: 315 Nguyễn Văn Linh, phường An Khánh, quận Ninh Kiều,<br>
-                                TP. Cần Thơ - Việt Nam.<br>
-                            </p>
-                        </li>
-                        <li>
-                            <p><i class="fas fa-phone-square"></i>Điện thoại: <a href="tel:(+84) 0908 79 6677">(+84) 0908 79 6677</a></p>
-                        </li>
-                        <li>
-                            <p><i class="fas fa-envelope"></i>Email: <a href="mailto:customer-service@vcos.com">customer-service@vcos.com</a></p>
-                        </li>
-                    </ul>
+                <div class="contact-info-left" runat="server" id="divContactUs">                    
                 </div>
             </div>
             <div class="col-lg-8 col-sm-12">

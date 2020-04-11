@@ -86,18 +86,20 @@
                                             <HeaderStyle Width="10%" HorizontalAlign="Center" />
                                             <ItemStyle HorizontalAlign="Center" />
                                         </telerik:GridCheckBoxColumn>--%>
-                                            <telerik:GridBoundColumn DataField="New" UniqueName="New" HeaderText="Mới (Thự tự)" ShowFilterIcon="false">
+                                            <telerik:GridBoundColumn DataField="Category" UniqueName="Category" HeaderText="Danh mục" ShowFilterIcon="false">
                                                 <HeaderStyle Width="10%" HorizontalAlign="Center" />
-                                                <ItemStyle HorizontalAlign="Center" />
-                                            </telerik:GridBoundColumn>
-                                            <telerik:GridBoundColumn DataField="Hot" UniqueName="Hot" HeaderText="HOT (Thứ tự)" ShowFilterIcon="false">
-                                                <HeaderStyle Width="10%" HorizontalAlign="Center" />
-                                                <ItemStyle HorizontalAlign="Center" />
+                                                <ItemStyle HorizontalAlign="Left" />
                                             </telerik:GridBoundColumn>
                                             <telerik:GridBoundColumn DataField="ViewNumber" UniqueName="ViewNumber" HeaderText="Số lượng xem" ShowFilterIcon="false">
                                                 <HeaderStyle Width="10%" HorizontalAlign="Center" />
                                                 <ItemStyle HorizontalAlign="Center" />
                                             </telerik:GridBoundColumn>
+                                            <telerik:GridTemplateColumn ShowFilterIcon="false" AllowFiltering="false" HeaderText="Trạng thái">
+                                                <ItemTemplate>
+                                                    <span class="<%# Eval("CssName") %>"><%# Eval("RecordStatus") %></span>
+                                                </ItemTemplate>
+                                                <ItemStyle Width="10%" HorizontalAlign="Center" />
+                                            </telerik:GridTemplateColumn>
                                             <telerik:GridBoundColumn DataField="PublishDate" UniqueName="PublishDate" DataFormatString="{0:dd/MM/yyyy}" HeaderText="Ngày xuất bản" ShowFilterIcon="false">
                                                 <HeaderStyle Width="10%" HorizontalAlign="Center" />
                                                 <ItemStyle HorizontalAlign="Center" />

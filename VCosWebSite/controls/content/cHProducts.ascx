@@ -9,7 +9,7 @@
                     <div class="container middle-col-hot">				
 					    <img src="/assets/images/vipharma-graphic_04.png" alt="" />					
                     </div>
-                    <p>Tất cả sản phẩm tại The Vuong's Cosmetics mang thương hiệu VIPHARMA CGMP-ASEAN đều được Bộ Y Tế công nhận được sản xuất tại nhà máy đạt tiêu chuẩn CGMP.... </p>
+                    <%--<p>Tất cả sản phẩm tại The Vuong's Cosmetics mang thương hiệu VIPHARMA CGMP-ASEAN đều được Bộ Y Tế công nhận được sản xuất tại nhà máy đạt tiêu chuẩn CGMP.... </p>--%>
                 </div>
             </div>
         </div>

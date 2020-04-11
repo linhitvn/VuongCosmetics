@@ -1361,6 +1361,12 @@
      top: 5px;
      padding-right: 6px;
 }
+ .footer-link-contact ul li em{
+     position: absolute;
+     left: 0;
+     top: 5px;
+     padding-right: 6px;
+}
  .footer-link-contact ul li p{
      padding-left: 25px;
      color: #a99f95;
@@ -2287,6 +2293,13 @@
      position: relative;
 }
  .contact-info-left ul li p i{
+     position: absolute;
+     left: 0;
+     top: 5px;
+     padding-right: 6px;
+     color: #ecbab2;
+}
+ .contact-info-left ul li p em{
      position: absolute;
      left: 0;
      top: 5px;

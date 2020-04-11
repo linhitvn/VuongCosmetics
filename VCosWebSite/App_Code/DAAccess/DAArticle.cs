@@ -67,4 +67,18 @@ public class DAArticle : TDatabase
         //mCmd.Parameters.Add("@ArticleID", SqlDbType.Int).Value = ArticleID;
         return ExecuteReader();
     }
+    public SqlDataReader USP_Article_Client_GetFooter()
+    {
+        mCmd.CommandText = "USP_Article_Client_GetFooter";
+        mCmd.Parameters.Clear();
+        //mCmd.Parameters.Add("@ArticleID", SqlDbType.Int).Value = ArticleID;
+        return ExecuteReader();
+    }
+    public SqlDataReader USP_Article_Client_GetContactUs()
+    {
+        mCmd.CommandText = "USP_Article_Client_GetContactUs";
+        mCmd.Parameters.Clear();
+        //mCmd.Parameters.Add("@ArticleID", SqlDbType.Int).Value = ArticleID;
+        return ExecuteReader();
+    }
 }
