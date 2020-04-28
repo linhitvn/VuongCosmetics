@@ -46,9 +46,9 @@ public partial class _Default : System.Web.UI.Page
                 // cart
                 dvProduct.Controls.Add(LoadControl(WebConfigurationManager.AppSettings["WebHome"] + "controls/content/cOrder.ascx"));
                 break;
-            case "CATA":
-                // company detail
-                dvProduct.Controls.Add(LoadControl(WebConfigurationManager.AppSettings["WebHome"] + "controls/content/cPartnerDetail.ascx"));
+            case "SPOL":
+                // sales policy
+                dvProduct.Controls.Add(LoadControl(WebConfigurationManager.AppSettings["WebHome"] + "controls/content/cSalesPolicy.ascx"));
                 break;
             case "BUY":
                 // checkout

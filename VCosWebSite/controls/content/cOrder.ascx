@@ -7,7 +7,7 @@
             <div class="col-lg-12">
                 <div class="title-all text-center">
                     <h1>Giỏ hàng của bạn </h1>
-                    <p>Chúc mừng bạn...</p>
+                    <p>The Vuong's Cosmetics trân trọng cảm ơn quý khách đã tin tưởng lựa chọn sản phẩm của chúng tôi!</p>
                 </div>
             </div>
         </div>
@@ -18,6 +18,7 @@
 <!-- Start Cart  -->
 <div class="cart-box-main">
     <div class="container">
+        <asp:Label ID="lblMessege" runat="server" Text="" style="color:#ff0000"></asp:Label>
         <div class="row">
             <div class="col-lg-12">
                 <div class="table-main table-responsive">
@@ -50,6 +51,7 @@
                                         <p><%# Eval("Price","{0:#,##}")%> VNĐ</p>
                                     </td>
                                     <td class="quantity-box">
+                                        <asp:Label ID="lblProductID" runat="server" Text='<%#Eval("ProductID")%>' Visible="false"></asp:Label>  
                                         <telerik:RadNumericTextBox RenderMode="Lightweight" ID="txtQuantity" runat="server" Value='<%# Convert.ToInt32(Eval("Quantity")) %>' MinValue="1" MaxLength="2" MaxValue="50" Type="Number" EnableEmbeddedSkins="false" ShowSpinButtons="true" NumberFormat-DecimalDigits="0"></telerik:RadNumericTextBox>
                                     </td>
                                     <td class="total-pr">
@@ -68,23 +70,15 @@
             </div>
         </div>
 
-        <%--<div class="row my-5">
-            <div class="col-lg-6 col-sm-6">
-                <div class="coupon-box">
-                        <div class="input-group input-group-sm">
-                            <input class="form-control" placeholder="Nhập mã giảm giá (nếu có)" aria-label="Coupon code" type="text">
-                            <div class="input-group-append">
-                                <button class="btn btn-theme" type="button">Apply Coupon</button>
-                            </div>
-                        </div>
-                    </div>
+        <div class="row my-5">
+            <div class="col-lg-6 col-sm-6">               
             </div>
             <div class="col-lg-6 col-sm-6">
                 <div class="update-box">
-                    <input value="Cập nhật đơn hàng" type="submit">
+                    <asp:Button ID="btnUpdateOrder" runat="server" Text="Cập nhật đơn hàng" Visible="false" OnClick="btnUpdateOrder_Click" />
                 </div>
             </div>
-        </div>--%>
+        </div>
 
         <div class="row my-5">
             <div class="col-lg-8 col-sm-12"></div>
@@ -115,8 +109,8 @@
             </div>
             <!-- CHECK-OUT Button -->
             <div class="col-12 d-flex my-5">
-                <a class="ml-auto btn hvr-hover" href="/san-pham/index.html" >Tiếp tục mua hàng</a>&nbsp; &nbsp;
-                <asp:LinkButton ID="lkbBuy" runat="server" CssClass="btn hvr-hover" 
+                <a class="ml-auto btn hvr-hover" href="/san-pham/index.html" style="color:#fff">Tiếp tục mua hàng</a>&nbsp; &nbsp;
+                <asp:LinkButton ID="lkbBuy" runat="server" CssClass="btn hvr-hover" style="color:#fff"
                             Visible="false" onclick="lkbBuy_Click">Thanh toán đơn hàng</asp:LinkButton>
                 
             </div>

@@ -63,4 +63,14 @@ public class DAOrderDetailTemp : TDatabase
         mCmd.Parameters.Add("@DistrictID", SqlDbType.Int).Value = DistrictID;
         return Execute();
     }
+
+    public int USP_OrderDetailTemp_UpdateQuantity(String OrderID, int ProductID, int Quantity)
+    {
+        mCmd.CommandText = "USP_OrderDetailTemp_UpdateQuantity";
+        mCmd.Parameters.Clear();
+        mCmd.Parameters.Add("@OrderID", SqlDbType.VarChar).Value = OrderID;
+        mCmd.Parameters.Add("@ProductID", SqlDbType.Int).Value = ProductID;
+        mCmd.Parameters.Add("@Quantity", SqlDbType.Int).Value = Quantity;
+        return Execute();
+    }
 }
