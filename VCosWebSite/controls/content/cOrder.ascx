@@ -81,8 +81,8 @@
         </div>
 
         <div class="row my-5">
-            <div class="col-lg-8 col-sm-12"></div>
-            <div class="col-lg-4 col-sm-12">
+            <div class="col-lg-6 col-sm-12"></div>
+            <div class="col-lg-6 col-sm-12">
                 <div class="order-box">
                     <h3>Chi tiết đơn hàng</h3>
                     <div class="d-flex">
@@ -95,7 +95,7 @@
                     </div>
                     <div class="d-flex">
                         <span>Phí vận chuyển</span>
-                        <div class="ml-auto font-weight-bold">Miễn phí </div>
+                        <div class="ml-auto font-weight-bold">Miễn phí <span class="small text-muted"> (đối với hóa đơn từ 500.000 VNĐ)</span></div>
                     </div>
                     <hr>
                     <div class="d-flex gr-total">

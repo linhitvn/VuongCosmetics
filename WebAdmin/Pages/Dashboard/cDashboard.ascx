@@ -157,14 +157,17 @@
                         OnItemCommand="RadGrid_Orders_ItemCommand" OnNeedDataSource="RadGrid_Orders_NeedDataSource">
                         <MasterTableView DataKeyNames="ID" ShowHeadersWhenNoRecords="true" CssClass="table table-bordered table-striped dataTable">
                             <Columns>
-                                <telerik:GridTemplateColumn UniqueName="RowNo" HeaderText="STT" HeaderStyle-HorizontalAlign="Center">
+                                <%--<telerik:GridTemplateColumn UniqueName="RowNo" HeaderText="STT" HeaderStyle-HorizontalAlign="Center">
                                     <ItemTemplate>
                                         <%# (Container.ItemIndex + (RadGrid_Orders.CurrentPageIndex * RadGrid_Orders.PageSize) + 1).ToString()%>
                                     </ItemTemplate>
                                     <ItemStyle Width="10%" HorizontalAlign="Center" />
-                                </telerik:GridTemplateColumn>
+                                </telerik:GridTemplateColumn>--%>
+                                <telerik:GridBoundColumn DataField="OrderNum" UniqueName="OrderNum" HeaderText="Mã HĐ" ShowFilterIcon="false">
+                                    <HeaderStyle Width="15%" HorizontalAlign="Center" />
+                                </telerik:GridBoundColumn>
                                 <telerik:GridBoundColumn DataField="CustomerName" UniqueName="CustomerName" HeaderText="Tên khách hàng" ShowFilterIcon="false">
-                                    <HeaderStyle Width="35%" HorizontalAlign="Center" />
+                                    <HeaderStyle Width="30%" HorizontalAlign="Center" />
                                 </telerik:GridBoundColumn>
                                 <telerik:GridBoundColumn DataField="OrderStatus" UniqueName="OrderStatus" HeaderText="trạng thái" ShowFilterIcon="false">
                                     <HeaderStyle Width="20%" HorizontalAlign="Center" />
@@ -172,6 +175,7 @@
                                 </telerik:GridBoundColumn>
                                 <telerik:GridBoundColumn DataField="TotalNeedPay" UniqueName="TotalNeedPay" DataFormatString="{0:###,###}" HeaderText="Giá trị" ShowFilterIcon="false">
                                     <HeaderStyle Width="20%" HorizontalAlign="Center" />
+                                    <ItemStyle HorizontalAlign="Right" />
                                 </telerik:GridBoundColumn>
                                 <telerik:GridBoundColumn DataField="SysDate" UniqueName="SysDate" DataFormatString="{0:dd/MM/yyyy HH:mm:ss}" HeaderText="Ngày đặt" ShowFilterIcon="false">
                                     <HeaderStyle Width="15%" HorizontalAlign="Center" />

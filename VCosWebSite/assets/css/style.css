@@ -2409,6 +2409,7 @@
  .single-product-details h5 del {
      font-size: 16px;
      color: #a99f95;
+     margin-right: 10px;
 }
  .available-stock span {
      font-size: 16px;	 

@@ -160,9 +160,11 @@ public partial class Pages_Order_cOrdersAlter : TUserControlForAlter
 
                 btPrintBill.Visible = false;
                 btPrintPacking.Visible = false;
+                dvOrderNum.Visible = false;
             }
             else
             {
+                lblOrderNum.Text = "Mã đơn hàng: " + daOrders.fOrderNum;
                 titleTotalPrice.InnerText = MyString.CurrencyFomat(daOrders.fTotalNeedPay) + " vnđ";
                 // Load OrderDetailt
                 LoadDataOrderDetailt();

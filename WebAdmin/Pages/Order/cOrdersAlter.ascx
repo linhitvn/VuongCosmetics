@@ -43,7 +43,9 @@
                     </div>
                 </div>
                 <div class="box-body">
-                   
+                    <div class="form-group" runat="server" id ="dvOrderNum">					   
+                        <h5><b><asp:Label ID="lblOrderNum" runat="server" Text=""></asp:Label></b></h5>
+                    </div>
                     <div class="form-group">
 					    <label>Khách hàng</label>
 					    <%--<select runat="server" id="fCustomerID" datatextfield="CustomerName" datavaluefield="ID" class="form-control"> </select>--%>

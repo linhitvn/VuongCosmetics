@@ -107,7 +107,7 @@
 					                        <HeaderStyle Width="8%" HorizontalAlign="Center" />
                                             <ItemStyle HorizontalAlign="Right" />
 				                        </telerik:GridBoundColumn>
-				                        <telerik:GridBoundColumn DataField="SalePrice" UniqueName="SalePrice" DataFormatString="{0:###,###}" HeaderText="Giá KM" ShowFilterIcon="false">
+				                        <telerik:GridBoundColumn DataField="SalePrice" UniqueName="SalePrice" DataFormatString="{0:###,###}" HeaderText="Giá trước KM" ShowFilterIcon="false">
 					                        <HeaderStyle Width="8%" HorizontalAlign="Center" />
                                             <ItemStyle HorizontalAlign="Right" />
 				                        </telerik:GridBoundColumn>

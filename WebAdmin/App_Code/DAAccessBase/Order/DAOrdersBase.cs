@@ -47,6 +47,8 @@ public class DAOrdersBase : TDatabase
     public String fBillDistrict;
     public String fBillProvince;
 
+    public string fOrderNum;
+
     public DAOrdersBase()
     {
         //USP_DataAdapter_Init();
@@ -187,6 +189,7 @@ public class DAOrdersBase : TDatabase
         if (mDataReader.Read())
         {
             fID = Convert.ToInt32(mDataReader["ID"]);
+            fOrderNum = mDataReader["OrderNum"].ToString();
             fOrderStatusID = Convert.ToInt32(mDataReader["OrderStatusID"]);
             fPaymentID = Convert.ToInt32(mDataReader["PaymentID"]);
             fShippingID = Convert.ToInt32(mDataReader["ShippingID"]);
@@ -261,6 +264,7 @@ public class DAOrdersBase : TDatabase
         if (mDataReader.Read())
         {
             fID = Convert.ToInt32(mDataReader["ID"]);
+            fOrderNum = mDataReader["OrderNum"].ToString();
             fOrderStatusID = Convert.ToInt32(mDataReader["OrderStatusID"]);
             fPaymentID = Convert.ToInt32(mDataReader["PaymentID"]);
             fShippingID = Convert.ToInt32(mDataReader["ShippingID"]);
@@ -335,6 +339,7 @@ public partial class DAOrders : DAOrdersBase
         if (mDataReader.Read())
         {
             fID = Convert.ToInt32(mDataReader["ID"]);
+            fOrderNum = mDataReader["OrderNum"].ToString();
             fOrderStatusID = Convert.ToInt32(mDataReader["OrderStatusID"]);
             fPaymentID = Convert.ToInt32(mDataReader["PaymentID"]);
             fShippingID = Convert.ToInt32(mDataReader["ShippingID"]);
@@ -398,6 +403,7 @@ public partial class DAOrders : DAOrdersBase
         if (mDataReader.Read())
         {
             fID = Convert.ToInt32(mDataReader["ID"]);
+            fOrderNum = mDataReader["OrderNum"].ToString();
             fOrderStatusID = Convert.ToInt32(mDataReader["OrderStatusID"]);
             fPaymentID = Convert.ToInt32(mDataReader["PaymentID"]);
             fShippingID = Convert.ToInt32(mDataReader["ShippingID"]);

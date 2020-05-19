@@ -47,7 +47,7 @@ public partial class InvoiceTemplate_Bill : System.Web.UI.Page
             fShippingName.InnerText = daOrders.fShippingName;
             fPaymentName.InnerText = daOrders.fPaymentName;
             fCustomer.InnerText = daOrders.fCustomerName;
-            fOrdersID.InnerText = daOrders.fID.ToString();
+            fOrdersID.InnerText = daOrders.fOrderNum.ToString();
             fSysDate.InnerText = daOrders.fSysDate.ToShortDateString();
 
             fTotalPrice.InnerText = MyString.CurrencyFomat(daOrders.fTotalPrice);

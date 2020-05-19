@@ -7,3 +7,9 @@
 	align-items: center;
 	margin-bottom: 25px;
 }
+.warning{
+    color:#ff0000;
+}
+.savesucc{
+    color: #1068f3;
+}

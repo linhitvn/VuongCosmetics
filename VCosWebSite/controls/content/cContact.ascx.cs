@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using NDL.Framework.Common;
 using System.Web.Configuration;
 using System.Data;
+using System.Net.Mail;
 
 public partial class controls_content_cContact : System.Web.UI.UserControl
 {
@@ -36,6 +37,7 @@ public partial class controls_content_cContact : System.Web.UI.UserControl
     {
         txtFullName.Value = txtFullName.Value.Trim();
         txtTitle.Value = txtTitle.Value.Trim();
+        txtPhone.Value = txtPhone.Value.Trim();
         txtEmail.Value = txtEmail.Value.Trim();
         txtContent.Value = txtContent.Value.Trim();
 
@@ -73,14 +75,51 @@ public partial class controls_content_cContact : System.Web.UI.UserControl
         string sInCommingEmail = WebConfigurationManager.AppSettings["Incomming"];
         string sToEmail = WebConfigurationManager.AppSettings["ToEmail"];
 
-        if (Utilities.SendEmailGmail("The Vuong's Cosmetics", sFromEmail, sPassEmail, sInCommingEmail, sToEmail, "",txtTitle.Value, txtContent.Value) >0)
-        {
+        string content = "<h4><b>Thông tin liên hệ</b></h4> <br />";
+        content += "<b>Họ tên: </b>" + txtFullName.Value + "<br />";
+        content += "<b>Email: </b>" + txtEmail.Value + "<br />";
+        content += "<b>Điện thoại: </b>" + txtPhone.Value + "<br />";
+        content += "<b>Chủ đề: </b>" + txtTitle.Value + "<br />";
+        content += "<b>Nội dung: </b>" + txtContent.Value + "<br />";
 
-            txtFullName.Value = String.Empty;
-            txtTitle.Value = String.Empty;
-            txtContent.Value = String.Empty;
-            txtEmail.Value = String.Empty;
-            lblMessege.Text = string.Format(Message.Show("ANYSUCC"), "Cảm ơn bạn đã liên hệ! Chúng tôi sẽ trả lời bạn trong thời gian sớm nhất.");
+        SendMail(sFromEmail, sPassEmail, sInCommingEmail, sToEmail, txtTitle.Value, content);
+       
+        txtFullName.Value = String.Empty;
+        txtTitle.Value = String.Empty;
+        txtContent.Value = String.Empty;
+        txtEmail.Value = String.Empty;
+        txtPhone.Value = String.Empty;
+        lblMessege.Text = string.Format(Message.Show("ANYSUCC"), "Cảm ơn bạn đã liên hệ! Chúng tôi sẽ trả lời bạn trong thời gian sớm nhất.");
+        
+        
+    }
+
+    private bool SendMail(string sFromEmail, string sPassEmail, string sInCommingEmail, string sToEmail, string title, string body)
+    {
+        System.Net.Mail.MailMessage mail = new System.Net.Mail.MailMessage();
+        mail.To.Add(sToEmail);
+        mail.From = new MailAddress(sFromEmail, "The Vuong's Cosmetics", System.Text.Encoding.UTF8);
+        mail.Subject = title;
+        mail.SubjectEncoding = System.Text.Encoding.UTF8;
+        mail.Body = body;
+        mail.BodyEncoding = System.Text.Encoding.UTF8;
+        mail.IsBodyHtml = true;
+        mail.Priority = MailPriority.High;
+        SmtpClient client = new SmtpClient();
+        client.Credentials = new System.Net.NetworkCredential(sFromEmail, sPassEmail);
+        client.Port = 25;
+        client.Host = sInCommingEmail;
+        client.EnableSsl = false;
+        try
+        {
+            client.Send(mail);
+            //Page.RegisterStartupScript("UserMsg", "<script>alert('Successfully Send...');if(alert){ window.location='SendMail.aspx';}</script>");
+            return true;
+        }
+        catch 
+        {
+            return false;
+            //Page.RegisterStartupScript("UserMsg", "<script>alert('Sending Failed...');if(alert){ window.location='SendMail.aspx';}</script>");
         }
     }
 }

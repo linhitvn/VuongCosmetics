@@ -192,7 +192,7 @@
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
-                                <label>Giá khuyến mãi</label>
+                                <label>Giá trước khuyến mãi</label>
                                 <input runat="server" id="fSalePrice" class="form-control" placeholder="">
                             </div>
                         </div>
