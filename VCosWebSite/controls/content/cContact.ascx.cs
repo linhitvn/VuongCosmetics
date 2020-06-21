@@ -82,7 +82,7 @@ public partial class controls_content_cContact : System.Web.UI.UserControl
         content += "<b>Chủ đề: </b>" + txtTitle.Value + "<br />";
         content += "<b>Nội dung: </b>" + txtContent.Value + "<br />";
 
-        SendMail(sFromEmail, sPassEmail, sInCommingEmail, sToEmail, txtTitle.Value, content);
+        Utils.SendMail(sFromEmail, sPassEmail, sInCommingEmail, sToEmail,"", txtTitle.Value, content);
        
         txtFullName.Value = String.Empty;
         txtTitle.Value = String.Empty;
@@ -93,33 +93,5 @@ public partial class controls_content_cContact : System.Web.UI.UserControl
         
         
     }
-
-    private bool SendMail(string sFromEmail, string sPassEmail, string sInCommingEmail, string sToEmail, string title, string body)
-    {
-        System.Net.Mail.MailMessage mail = new System.Net.Mail.MailMessage();
-        mail.To.Add(sToEmail);
-        mail.From = new MailAddress(sFromEmail, "The Vuong's Cosmetics", System.Text.Encoding.UTF8);
-        mail.Subject = title;
-        mail.SubjectEncoding = System.Text.Encoding.UTF8;
-        mail.Body = body;
-        mail.BodyEncoding = System.Text.Encoding.UTF8;
-        mail.IsBodyHtml = true;
-        mail.Priority = MailPriority.High;
-        SmtpClient client = new SmtpClient();
-        client.Credentials = new System.Net.NetworkCredential(sFromEmail, sPassEmail);
-        client.Port = 25;
-        client.Host = sInCommingEmail;
-        client.EnableSsl = false;
-        try
-        {
-            client.Send(mail);
-            //Page.RegisterStartupScript("UserMsg", "<script>alert('Successfully Send...');if(alert){ window.location='SendMail.aspx';}</script>");
-            return true;
-        }
-        catch 
-        {
-            return false;
-            //Page.RegisterStartupScript("UserMsg", "<script>alert('Sending Failed...');if(alert){ window.location='SendMail.aspx';}</script>");
-        }
-    }
+    
 }

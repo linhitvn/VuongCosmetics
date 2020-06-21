@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Configuration;
@@ -142,7 +143,23 @@ public partial class controls_content_cCheckoutNew : System.Web.UI.UserControl
         int iResult;
         iResult = mOrder.USP_Orders_Client_Insert(Session["WOrderID"].ToString(), txtLastName.Value + " " + txtFirstName.Value, txtAddress.Value, txtTel.Value, txtEmail.Value,Convert.ToInt32(rblPayment.SelectedValue), Convert.ToInt32(ddlCity.SelectedValue), Convert.ToInt32(ddlDistrict.SelectedValue));
         Session["OrderBuyID"] = iResult;
+        if(iResult>1)
+        {
+            //Fetching Email Body Text from EmailTemplate File.  
+            string FilePath = Server.MapPath("~/Template/OrderEmail.html");
+            StreamReader str = new StreamReader(FilePath);
+            string MailText = str.ReadToEnd();
+            str.Close();
 
+            string sFromEmail = WebConfigurationManager.AppSettings["FromMail"];
+            string sPassEmail = WebConfigurationManager.AppSettings["FromPass"];
+            string sInCommingEmail = WebConfigurationManager.AppSettings["Incomming"];           
+            string sbccEmail = WebConfigurationManager.AppSettings["BccEmail"];
+
+            MailText = MailText.Replace("{orderNumber}", Utils.CreateOrderNumber(iResult.ToString()));
+
+            Utils.SendMail(sFromEmail, sPassEmail, sInCommingEmail, txtEmail.Value, sbccEmail, "VCOS - Xác nhận đơn hàng", MailText);
+        }
         Response.Redirect("/check-out/index.html");
     }
 

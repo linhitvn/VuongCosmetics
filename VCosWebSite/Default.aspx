@@ -13,9 +13,9 @@
 	<meta name="description" content="" />
     <meta name="author" content="">
      <!-- Site Icons -->
-    <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
-
+    <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon" />
+    <link rel="icon" type="image/ico" href="/assets/images/favicon.ico" />
+    <link rel="apple-touch-icon" type="image/ico" href="/assets/images/favicon.ico" />
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
     <!-- Site CSS -->
@@ -40,7 +40,13 @@
 
 	  gtag('config', 'UA-168903364-1');
 	</script>
-
+    <meta property="og:title" content="The Vuong's Cosmetics" />
+    <meta property="og:type" content="Vipharma">
+    <meta property="og:image" content="https://vuongcosmetics.com/assets/images/logo.png" />
+    <meta property="og:image:secure_url" content="https://vuongcosmetics.com/assets/images/logo.png" />
+    <meta property="og:url" content="https://vuongcosmetics.com" />
+    <meta property="og:site_name" content="vuongcosmetics.com" />
+    <meta property="og:description" content="Cung cấp sĩ & lẻ mỹ phẩm thương hiệu VIPHARMA CGMP-ASEAN" />
 </head>
 <body>
     <form id="frmMain" runat="server">
